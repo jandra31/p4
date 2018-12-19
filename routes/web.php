@@ -10,45 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//poll
 Route::get('/'               ,'PollController@home');
-Route::get('/dash'           ,'DashboardController@landing');
-Route::get('/dataview'       ,'DataViewController@landing');
-Route::post('/datacontrol'   ,'DataEditorController@landing');
-//Route::get('/login'          ,'LoginController@landing');
+//thank you view should redirect back to poll after 5s
 Route::get('/thanks'         , 'ThanksController@addPollResults');
+Route::get('/dash'           ,'DashboardController@landing');
+//table viewers for data
+Route::get('/dataview'       ,'DataViewController@landing');
+//data controller
+Route::post('/datacontrol'   ,'DataEditorController@landing');
 Route::get('/pollDelete'     , 'DataViewController@pollDelete');
 Route::get('/locationUpdate' , 'DataViewController@update');
-Route::post('/newLocation'    , 'DataViewController@addLocation');
+Route::post('/newLocation'   , 'DataViewController@addLocation');
 Route::get('/create'         , 'DataViewController@newLocation');
 Route::get('/locationDelete' , 'DataViewController@deleteLocation');
+//login
 Auth::routes();
 Route::get('activate/{token}', 'Auth\RegisterController@activate')
     ->name('activate');
 
-/*
-//rater
-Route::get('/', function () {
-    return view('poll');
-});
-//login
-Route::get('/', function () {
-    return view('login');
-});
-//acc mngmnt
-Route::get('/', function () {
-    return view('data_view');
-});
-//locations
-Route::get('/', function () {
-    return view('data_view');
-});
-// edirot
-Route::get('/', function () {
-    return view('data_editor');
-});
-//dash
-Route::get('/', function () {
-    return view('dashboard');
-});
-*/
