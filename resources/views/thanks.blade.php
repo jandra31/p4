@@ -10,4 +10,4 @@
         </div>
     </div>
 @endsection
-@php(header("refresh:5;/p4/public/"))
+@php(header("refresh:5;/"))

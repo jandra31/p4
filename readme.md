@@ -64,6 +64,5 @@ __Delete__
 ## Notes for instructor
 + there is no way to reach the login from the landing page this is intentional as the landing page should only be the customer taking a poll, the backend data view systems are meant for administrators who should knwo the url to login.
 *there's probably is a more elegant solution for this but i couldn't come up with one at the moment*
-
                       
 
